@@ -11,8 +11,8 @@ function App() {
   const [suggetion, setSuggetion] = useState(true);
 
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-  const urlCoords = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
-  const urlCities = `http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${debouncedInput}`;
+  const urlCoords = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
+  const urlCities = `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${debouncedInput}`;
 
   const GetWeatherCoords = () => {
     if (lat && long) {
