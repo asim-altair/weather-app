@@ -10,7 +10,7 @@ function App() {
   const [cities, setCities] = useState();
   const [suggetion, setSuggetion] = useState(true);
 
-  const apiKey = "a7b734d4a26b4630bdb143649250702";
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const urlCoords = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
   const urlCities = `http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${debouncedInput}`;
 
